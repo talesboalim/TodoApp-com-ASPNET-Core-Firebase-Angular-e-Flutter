@@ -29,7 +29,7 @@ namespace Todo.Domain.Entities
 
         public void UpdateTitle(string title)
         {
-
+            Title = title;
         }
     }
 }
