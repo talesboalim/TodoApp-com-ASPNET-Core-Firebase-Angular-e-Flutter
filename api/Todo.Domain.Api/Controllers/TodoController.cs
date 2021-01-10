@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Todo.Domain.Commands;
 using Todo.Domain.Entities;
@@ -10,8 +12,15 @@ namespace Todo.Api.Controllers
 {
     [ApiController]
     [Route("v1/todos")]
+    [Authorize]
     public class TodoController : ControllerBase
     {
+        private string getUserAuthenticated()
+        {
+            var user = User.Claims.FirstOrDefault(x => x.Type == "user_id")?.Value;
+            return user;
+        }
+
         [Route("")]
         [HttpGet]
         public IEnumerable<TodoItem> GetAll(
@@ -19,7 +28,7 @@ namespace Todo.Api.Controllers
 
         )
         {
-            return repository.GetAll("Tales Boalim");
+            return repository.GetAll(getUserAuthenticated());
         }
 
         [Route("done")]
@@ -29,7 +38,8 @@ namespace Todo.Api.Controllers
 
         )
         {
-            return repository.GetAllDone("Tales Boalim");
+
+            return repository.GetAllDone(getUserAuthenticated());
         }
 
         [Route("undone")]
@@ -39,7 +49,7 @@ namespace Todo.Api.Controllers
 
         )
         {
-            return repository.GetAllUndone("Tales Boalim");
+            return repository.GetAllUndone(getUserAuthenticated());
         }
 
         [Route("done/today")]
@@ -50,7 +60,7 @@ namespace Todo.Api.Controllers
         )
         {
             return repository.GetByPeriod(
-                "Tales Boalim",
+                getUserAuthenticated(),
                 DateTime.Now.Date,
                 true
             );
@@ -64,7 +74,7 @@ namespace Todo.Api.Controllers
         )
         {
             return repository.GetByPeriod(
-                "Tales Boalim",
+                getUserAuthenticated(),
                 DateTime.Now.Date,
                 false
             );
@@ -78,7 +88,7 @@ namespace Todo.Api.Controllers
         )
         {
             return repository.GetByPeriod(
-                "Tales Boalim",
+                getUserAuthenticated(),
                 DateTime.Now.Date.AddDays(1),
                 true
             );
@@ -92,7 +102,7 @@ namespace Todo.Api.Controllers
         )
         {
             return repository.GetByPeriod(
-                "Tales Boalim",
+                getUserAuthenticated(),
                 DateTime.Now.Date.AddDays(1),
                 false
             );
@@ -107,7 +117,7 @@ namespace Todo.Api.Controllers
             [FromServices] TodoHandler handler//A partir do que foi configurado no Startup.cs no AddTransient do Handler, vai resolver a dependência rapidamente
         )
         {
-            command.User = "Tales Boalim";
+            command.User = getUserAuthenticated();
             //O command recebe os dados e passa para o Handler pois é ele quem vai tratar
             return (GenericCommandResult)handler.Handle(command);
         }
@@ -119,7 +129,7 @@ namespace Todo.Api.Controllers
             [FromServices] TodoHandler handler
         )
         {
-            command.User = "Tales Boalim";
+            command.User = getUserAuthenticated();
             return (GenericCommandResult)handler.Handle(command);
         }
 
@@ -130,7 +140,7 @@ namespace Todo.Api.Controllers
             [FromServices] TodoHandler handler
         )
         {
-            command.User = "Tales Boalim";
+            command.User = getUserAuthenticated();
             return (GenericCommandResult)handler.Handle(command);
         }
 
@@ -141,7 +151,7 @@ namespace Todo.Api.Controllers
             [FromServices] TodoHandler handler
         )
         {
-            command.User = "Tales Boalim";
+            command.User = getUserAuthenticated();
             return (GenericCommandResult)handler.Handle(command);
         }
 

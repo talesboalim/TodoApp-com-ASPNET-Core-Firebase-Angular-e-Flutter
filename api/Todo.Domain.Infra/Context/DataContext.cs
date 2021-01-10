@@ -14,8 +14,8 @@ namespace Todo.Domain.Infra.Contexts
         {
             modelBuilder.Entity<TodoItem>().ToTable("Todos");
             modelBuilder.Entity<TodoItem>().Property(x => x.Id);
-            modelBuilder.Entity<TodoItem>().Property(x => x.User).HasMaxLength(120).HasColumnName("varchar(120)");
-            modelBuilder.Entity<TodoItem>().Property(x => x.Title).HasMaxLength(160).HasColumnName("varchar(160)");
+            modelBuilder.Entity<TodoItem>().Property(x => x.User).HasMaxLength(120).HasColumnName("User");
+            modelBuilder.Entity<TodoItem>().Property(x => x.Title).HasMaxLength(160).HasColumnName("Title");
             modelBuilder.Entity<TodoItem>().Property(x => x.Done).HasColumnType("bit");
             modelBuilder.Entity<TodoItem>().Property(x => x.Date);
             modelBuilder.Entity<TodoItem>().Property(x => x.User);
