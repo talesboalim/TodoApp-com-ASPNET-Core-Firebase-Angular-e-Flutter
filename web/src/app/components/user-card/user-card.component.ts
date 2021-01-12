@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserCardComponent implements OnInit {
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+
   }
   /*
   public user: any = {

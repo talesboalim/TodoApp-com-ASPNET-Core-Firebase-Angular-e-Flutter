@@ -1,3 +1,4 @@
+import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoListComponent implements OnInit {
 
-  constructor() { }
+  // @Input() todos: any = null;
+
+  // constructor(
+  //   private service: DataService,
+  //   private afAuth: AngularFireAuth,
+  // ) { }
 
   ngOnInit(): void {
   }
+
+  // markAsDone(todo) {
+  //   this.afAuth.idToken.subscribe(token => {
+  //     const data = { id: todo.id };
+  //     this.service.markAsDone(data, token).subscribe(res => { todo.done = true });
+  //   });
+  // }
 
 }

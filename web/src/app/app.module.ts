@@ -13,6 +13,7 @@ import { TabsComponent } from './components/tabs/tabs.component';
 import { TodayComponent } from './pages/today/today.component';
 import { TomorrowComponent } from './pages/tomorrow/tomorrow.component';
 import { NewComponent } from './pages/new/new.component';
+import { AllComponent } from './pages/all/all.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NewComponent } from './pages/new/new.component';
     TabsComponent,
     TodayComponent,
     TomorrowComponent,
-    NewComponent
+    NewComponent,
+    AllComponent
   ],
   imports: [
     BrowserModule,
