@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
 //import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
@@ -7,10 +8,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-card.component.css']
 })
 export class UserCardComponent implements OnInit {
-  ngOnInit(): void {
-
-  }
-  /*
   public user: any = {
     name: "",
     picture: "https://placehold.it/200",
@@ -29,9 +26,9 @@ export class UserCardComponent implements OnInit {
       }
     });
   }
-*/
+
   logout() {
-    //this.afAuth.signOut();
+    this.afAuth.signOut();
   }
 
 
