@@ -1,4 +1,4 @@
-# todo
+# todos
 
 A new Flutter project.
 

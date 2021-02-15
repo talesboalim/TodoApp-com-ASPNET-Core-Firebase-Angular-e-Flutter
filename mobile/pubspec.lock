@@ -49,7 +49,11 @@ packages:
       name: cupertino_icons
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "0.1.3"
+=======
+    version: "1.0.0"
+>>>>>>> 82d79a041c84f17f29ccab56db6f18cd2fbdc07e
   fake_async:
     dependency: transitive
     description:
