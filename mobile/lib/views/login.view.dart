@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:todo/components/button.widget.dart';
-import 'package:todo/controllers/login.controller.dart';
-import 'package:todo/views/home.view.dart';
-import 'package:todo/widgets/busy.widget.dart';
+import 'package:todos/components/button.widget.dart';
+import 'package:todos/controllers/login.controller.dart';
+import 'package:todos/views/home.view.dart';
+import 'package:todos/widgets/busy.widget.dart';
 
 class LoginView extends StatefulWidget {
   @override

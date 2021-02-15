@@ -1,8 +1,7 @@
-/*
 import 'package:flutter/material.dart';
-import 'package:todo/components/avatar.widget.dart';
-import 'package:todo/controllers/login.controller.dart';
-import 'package:todo/views/login.view.dart';
+import 'package:todos/components/avatar.widget.dart';
+import 'package:todos/controllers/login.controller.dart';
+import 'package:todos/views/login.view.dart';
 import '../user.dart';
 
 class UserCard extends StatelessWidget {
@@ -67,4 +66,3 @@ class UserCard extends StatelessWidget {
     );
   }
 }
-*/

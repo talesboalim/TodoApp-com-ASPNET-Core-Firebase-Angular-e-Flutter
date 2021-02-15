@@ -1,9 +1,8 @@
-/*
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';
-import 'package:todo/controllers/todo.controller.dart';
-import 'package:todo/stores/app.store.dart';
+import 'package:todos/controllers/todo.controller.dart';
+import 'package:todos/stores/app.store.dart';
 
 class Navbar extends StatelessWidget {
   @override
@@ -71,4 +70,3 @@ class Navbar extends StatelessWidget {
     );
   }
 }
-*/

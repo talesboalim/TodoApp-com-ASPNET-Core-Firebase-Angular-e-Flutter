@@ -8,10 +8,10 @@ ThemeData appTheme() {
   return ThemeData(
     brightness: brightness,
     textTheme: new TextTheme(
-      body1: new TextStyle(
+      bodyText2: new TextStyle(
         fontFamily: "Poppins",
       ),
-      body2: TextStyle(
+      bodyText1: TextStyle(
         fontFamily: "Poppins",
       ),
       button: TextStyle(
@@ -20,31 +20,31 @@ ThemeData appTheme() {
       caption: TextStyle(
         fontFamily: "Poppins",
       ),
-      display1: TextStyle(
+      headline4: TextStyle(
         fontFamily: "Poppins",
       ),
-      display2: TextStyle(
+      headline3: TextStyle(
         fontFamily: "Poppins",
       ),
-      display3: TextStyle(
+      headline2: TextStyle(
         fontFamily: "Poppins",
       ),
-      display4: TextStyle(
+      headline1: TextStyle(
         fontFamily: "Poppins",
       ),
-      headline: TextStyle(
+      headline5: TextStyle(
         fontFamily: "Poppins",
       ),
       overline: TextStyle(
         fontFamily: "Poppins",
       ),
-      subhead: TextStyle(
+      subtitle1: TextStyle(
         fontFamily: "Poppins",
       ),
-      subtitle: TextStyle(
+      subtitle2: TextStyle(
         fontFamily: "Poppins",
       ),
-      title: TextStyle(
+      headline6: TextStyle(
         fontFamily: "Poppins",
       ),
     ),

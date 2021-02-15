@@ -1,11 +1,10 @@
-/*
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import 'package:todo/controllers/todo.controller.dart';
-import 'package:todo/stores/app.store.dart';
-import 'package:todo/widgets/busy.widget.dart';
+import 'package:todos/controllers/todo.controller.dart';
+import 'package:todos/stores/app.store.dart';
+import 'package:todos/widgets/busy.widget.dart';
 
 class TodoList extends StatelessWidget {
   final _dateFormat = new DateFormat('dd/MM/yyyy');
@@ -88,4 +87,3 @@ class TodoList extends StatelessWidget {
     );
   }
 }
-*/
