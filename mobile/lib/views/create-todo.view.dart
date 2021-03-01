@@ -87,7 +87,7 @@ class _CreateTodoViewState extends State<CreateTodoView> {
                         ),
                       ),
                     ),
-                    FlatButton(
+                    TextButton(
                       child: Text("Alterar Data"),
                       onPressed: () {
                         _selectDate(context);
@@ -129,7 +129,7 @@ class _CreateTodoViewState extends State<CreateTodoView> {
                 width: double.infinity,
               ),
             ),
-            FlatButton(
+            TextButton(
               child: Text("Cancelar"),
               onPressed: () {
                 Navigator.push(

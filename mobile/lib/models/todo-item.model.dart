@@ -2,7 +2,7 @@ class TodoItem {
   String id;
   String title;
   bool done;
-  DateTime date; // Alterado
+  DateTime date;
 
   TodoItem({this.id, this.title, this.done, this.date});
 
@@ -10,7 +10,7 @@ class TodoItem {
     id = json['id'];
     title = json['title'];
     done = json['done'];
-    date = DateTime.parse(json['date']); // Alterado
+    date = DateTime.parse(json['date']);
   }
 
   Map<String, dynamic> toJson() {
@@ -18,7 +18,7 @@ class TodoItem {
     data['id'] = this.id;
     data['title'] = this.title;
     data['done'] = this.done;
-    data['date'] = this.date.toString().substring(0, 10); // Alterado
+    data['date'] = this.date.toString().substring(0, 10);
     return data;
   }
 }

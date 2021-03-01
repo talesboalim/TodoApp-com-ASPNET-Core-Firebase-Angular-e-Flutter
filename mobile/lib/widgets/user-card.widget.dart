@@ -39,7 +39,7 @@ class UserCard extends StatelessWidget {
           ),
           Container(
             height: 20,
-            child: FlatButton(
+            child: TextButton(
               child: Text(
                 "Sair",
                 style: TextStyle(

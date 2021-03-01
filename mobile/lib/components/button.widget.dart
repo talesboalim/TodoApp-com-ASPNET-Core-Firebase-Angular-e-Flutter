@@ -18,7 +18,7 @@ class TDButton extends StatelessWidget {
     return Container(
       color: Theme.of(context).primaryColor,
       width: width != null ? width : 250,
-      child: FlatButton(
+      child: TextButton(
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,

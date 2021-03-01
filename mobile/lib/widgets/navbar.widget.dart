@@ -18,7 +18,7 @@ class Navbar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
           Observer(
-            builder: (_) => FlatButton(
+            builder: (_) => TextButton(
               child: Text(
                 "Hoje",
                 style: TextStyle(
@@ -34,7 +34,7 @@ class Navbar extends StatelessWidget {
             ),
           ),
           Observer(
-            builder: (_) => FlatButton(
+            builder: (_) => TextButton(
               child: Text(
                 "Amanhã",
                 style: TextStyle(
@@ -50,7 +50,7 @@ class Navbar extends StatelessWidget {
             ),
           ),
           Observer(
-            builder: (_) => FlatButton(
+            builder: (_) => TextButton(
               child: Text(
                 "Todas",
                 style: TextStyle(

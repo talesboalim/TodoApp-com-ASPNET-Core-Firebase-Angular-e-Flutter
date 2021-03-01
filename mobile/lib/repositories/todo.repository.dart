@@ -5,17 +5,6 @@ import 'package:todos/models/todo-item.model.dart';
 
 class TodoRepository {
   Future<List<TodoItem>> getTodayTodos() async {
-    // var todos = new List<TodoItem>();
-    // todos.add(
-    //   new TodoItem(
-    //     id: "123456",
-    //     title: "Hoje",
-    //     done: false,
-    //     date: DateTime.now(),
-    //   ),
-    // );
-    // await Future.delayed(const Duration(milliseconds: 1500), () {});
-    // return todos;
     var url = "https://10.0.2.2:5001/v1/todos/undone/today";
     Response response = await Dio().get(
       url,

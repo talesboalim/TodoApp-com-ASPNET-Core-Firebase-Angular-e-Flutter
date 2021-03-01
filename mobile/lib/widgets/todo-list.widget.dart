@@ -51,13 +51,13 @@ class TodoList extends StatelessWidget {
                             content:
                                 Text("Deseja concluir a tarefa ${todo.title}?"),
                             actions: <Widget>[
-                              FlatButton(
+                              TextButton(
                                 child: new Text("Cancelar"),
                                 onPressed: () {
                                   Navigator.of(context).pop();
                                 },
                               ),
-                              FlatButton(
+                              TextButton(
                                 child: new Text(
                                   "Concluir",
                                   style: TextStyle(
@@ -68,10 +68,10 @@ class TodoList extends StatelessWidget {
                                   controller.markAsDone(todo).then((data) {
                                     Navigator.of(context).pop();
                                   }).catchError((err) {
-                                    var snackbar = new SnackBar(
-                                      content: Text("Ops, algo deu errado!"),
-                                    );
-                                    Scaffold.of(context).showSnackBar(snackbar);
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                        SnackBar(
+                                            content:
+                                                Text("Ops, algo deu errado!")));
                                   });
                                 },
                               ),
